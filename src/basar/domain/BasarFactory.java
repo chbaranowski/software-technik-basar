@@ -3,7 +3,7 @@ package basar.domain;
 
 public interface BasarFactory {
 	
-	static BasarFacade instance = new BasarFacadeImpl();
+	static BasarFactory instance = new BasarFactoryImpl();
 	
 	BasarFacade createBasarFacade();
 
