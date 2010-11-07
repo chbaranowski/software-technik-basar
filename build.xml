@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="basar" default="package" basedir=".">
+
+    <description>
+            Demo ANT build for basar application.
+    </description>
+
+    <property name="build.home" value="${basedir}/target" />
+    <property name="build.webcontent" value="${basedir}/web-content" />
+    <property name="build.libraries" value="${basedir}/lib" />
+    <property name="build.war.directory" value="${build.home}/war" />
+    <property name="build.war" value="${build.home}/basar.war" />
+    <property name="build.src" value="${basedir}/src" />
+    <property name="build.classdir" value="${build.home}/classes" />
+    <property name="build.test.classdir" value="${build.home}/test-classes" />
+    <property name="build.test.src" value="${basedir}/test" />
+
+    <path id="classpath">
+        <pathelement path="${classpath}" />
+        <fileset dir="lib">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <path id="classpath.test">
+        <path refid="classpath" />
+        <pathelement path="${build.classdir}" />
+        <fileset dir="lib-test">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <target name="clean">
+        <delete dir="target" />
+    </target>
+
+    <target name="package" depends="compile, test, package-war">
+    </target>
+
+    <target name="compile">
+        <echo message="Compile Java Source" />
+        <mkdir dir="${build.classdir}" />
+        <javac srcdir="${build.src}" destdir="${build.classdir}" debug="true" includes="**/*.java" source="1.6">
+            <classpath refid="classpath" />
+        </javac>
+    </target>
+
+    <target name="compile-tests">
+        <echo message="Compile Tests" />
+        <mkdir dir="${build.test.classdir}" />
+        <javac srcdir="${build.test.src}" destdir="${build.test.classdir}" debug="true" includes="**/*.java" source="1.6">
+            <classpath refid="classpath.test" />
+        </javac>
+    </target>
+
+    <target name="test" depends="compile-tests">
+        <echo message="Run Tests" />
+        <junit>
+            <classpath>
+                <path refid="classpath.test" />
+                <pathelement path="${build.test.classdir}" />
+            </classpath>
+            <formatter type="brief" usefile="false" />
+            <batchtest>
+               <fileset dir="${build.test.classdir}" includes="**/*Test.class" />
+            </batchtest>
+        </junit>
+    </target>
+    
+     <target name="package-war" depends="compile">
+        <echo message="Package WAR (Web Archiv)" />
+        <mkdir dir="${build.war.directory}" />
+        <copy todir="${build.war.directory}/">
+            <fileset dir="${build.webcontent}" includes="**/*.*" /> 
+        </copy>
+        <mkdir dir="${build.war.directory}/WEB-INF/classes" />
+        <copy todir="${build.war.directory}/WEB-INF/classes">
+            <fileset dir="${build.classdir}" includes="**/*.class" /> 
+        </copy>
+        <jar jarfile="${build.war}" basedir="${build.war.directory}" />
+    </target>
+    
+
+</project>
