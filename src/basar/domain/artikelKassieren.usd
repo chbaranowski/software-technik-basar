@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:SequenceDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="artikelKassieren" size="949,505" metadata="uml2-1.0" initialized="true" scrolledX="-16" tag="1000" key="32303037303533312D3130303020534F54452D42617361722F646576656C6F706572">
+  <children xsi:type="editmodel:InstanceEditModel" name="CashPointServlet" location="107,20" size="158,394" id="basar.ui.web/CashPointServlet" itemName="client">
+    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.4/@children.0/@sourceConnections.0" location="71,92" size="16,192" sequenceItemContainer="//@children.0" length="192">
+      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="purchase" id="basar.domain/BasarFacade#purchase(Lbasar.domain.Sale;)" source="//@children.0/@children.0" target="//@children.1/@children.0" targetEnd="//@children.0/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="purchase(Sale)" associatedSequenceNumber="1.1">
+        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.0/@children.0/@sourceConnections.0/@children.0/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" name="purchase(Sale)" size="75,12"/>
+          <children xsi:type="editmodel:LabelEditModel" name="1.1" size="15,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.0/@children.0/@sourceConnections.0/@children.1/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+      </sourceConnections>
+    </children>
+  </children>
+  <children xsi:type="editmodel:InstanceEditModel" name="BasarFacadeImpl" location="225,20" size="163,394" id="basar.domain/BasarFacadeImpl" itemName="basar">
+    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.0/@children.0/@sourceConnections.0" location="73,92" size="16,192" sequenceItemContainer="//@children.1" length="192">
+      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="getSeller" id="basar.domain/SellerRepository#getSeller(J)" source="//@children.1/@children.0" target="//@children.2/@children.0" targetEnd="//@children.1/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="getSeller(long): Seller" associatedSequenceNumber="1.1.1">
+        <children xsi:type="editmodel:SequenceEndEditModel" location="9,61" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.1/@children.0/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.1/@children.0/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.1/@children.0/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.1/@children.0/@sourceConnections.0/@children.0/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" name="getSeller(long): Seller" size="103,12"/>
+          <children xsi:type="editmodel:LabelEditModel" name="1.1.1" size="24,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.1/@children.0/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.1/@children.0/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.1/@children.0/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.1/@children.0/@sourceConnections.0/@children.1/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="insertPosition" id="basar.domain/PositionRepository#insertPosition(Lbasar.domain.Position;)" source="//@children.1/@children.0" target="//@children.3/@children.0" targetEnd="//@children.1/@children.0/@sourceConnections.1/@children.1" sourceEnd="//@children.1/@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manual" associatedMethod="insertPosition(Position)" associatedSequenceNumber="1.1.2">
+        <children xsi:type="editmodel:SequenceEndEditModel" location="14,126" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.1/@children.0/@sourceConnections.1/@children.0/@children.0" methodLabel="//@children.1/@children.0/@sourceConnections.1/@children.0/@children.1" sequenceNumberLabel="//@children.1/@children.0/@sourceConnections.1/@children.0/@children.2" statementExpression="//@children.1/@children.0/@sourceConnections.1/@children.0/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" name="insertPosition(Position)" size="111,12"/>
+          <children xsi:type="editmodel:LabelEditModel" name="1.1.2" size="24,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.1/@children.0/@sourceConnections.1/@children.1/@children.0" methodLabel="//@children.1/@children.0/@sourceConnections.1/@children.1/@children.1" sequenceNumberLabel="//@children.1/@children.0/@sourceConnections.1/@children.1/@children.2" statementExpression="//@children.1/@children.0/@sourceConnections.1/@children.1/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+      </sourceConnections>
+    </children>
+  </children>
+  <children xsi:type="editmodel:InstanceEditModel" name="SellerRepositoryImpl" location="375,20" size="149,394" id="basar.domain/SellerRepositoryImpl" itemName="">
+    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.1/@children.0/@sourceConnections.0" location="66,153" size="16,40" sequenceItemContainer="//@children.2"/>
+  </children>
+  <children xsi:type="editmodel:InstanceEditModel" name="PositionRepositoryImpl" location="555,20" size="160,394" id="basar.domain/PositionRepositoryImpl" itemName="">
+    <children xsi:type="editmodel:ActivationEditModel" targetConnections="//@children.1/@children.0/@sourceConnections.1" location="72,218" size="16,40" sequenceItemContainer="//@children.3"/>
+  </children>
+  <children xsi:type="editmodel:ActorEditModel" location="-15,20" size="100,394" itemName="User">
+    <children xsi:type="editmodel:ActivationEditModel" location="42,92" size="16,192" sequenceItemContainer="//@children.4" length="192">
+      <sourceConnections xsi:type="editmodel:SequenceMessageEditModel" name="doPost" source="//@children.4/@children.0" target="//@children.0/@children.0" targetEnd="//@children.4/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual" associatedMethod="" associatedSequenceNumber="1">
+        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" attachSource="true" userLabel="//@children.4/@children.0/@sourceConnections.0/@children.0/@children.0" methodLabel="//@children.4/@children.0/@sourceConnections.0/@children.0/@children.1" sequenceNumberLabel="//@children.4/@children.0/@sourceConnections.0/@children.0/@children.2" statementExpression="//@children.4/@children.0/@sourceConnections.0/@children.0/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="34,12" labelValue="doPost"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" name="1" size="6,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+        <children xsi:type="editmodel:SequenceEndEditModel" anchorKind="FixedAtEdge" userLabel="//@children.4/@children.0/@sourceConnections.0/@children.1/@children.0" methodLabel="//@children.4/@children.0/@sourceConnections.0/@children.1/@children.1" sequenceNumberLabel="//@children.4/@children.0/@sourceConnections.0/@children.1/@children.2" statementExpression="//@children.4/@children.0/@sourceConnections.0/@children.1/@children.3">
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:LabelEditModel" size="0,12"/>
+          <children xsi:type="editmodel:MessageLabelEditModel" size="0,12"/>
+        </children>
+      </sourceConnections>
+    </children>
+  </children>
+  <children xsi:type="editmodel:FrameEditModel" location="258,125" size="426,162" type="loop">
+    <children xsi:type="editmodel:FrameCompartmentEditModel" location="1,20" size="424,142" condition="foreach seller"/>
+  </children>
+  <diagramOptions xsi:type="options:SequenceDiagramOptions" level="0" properties="Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <sequenceDiagramPreferences showPopupBars="true" showConnectionHandles="true"/>
+</editmodel:SequenceDiagramEditModel>
