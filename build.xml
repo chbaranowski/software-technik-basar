@@ -48,7 +48,7 @@
   <target name="package" depends="compile, test, package-war">
   </target>
 
-  <target name="compile">
+  <target name="compile" depends="clean">
     <echo message="Compile Java Source" />
     <mkdir dir="${build.classdir}" />
     <javac srcdir="${build.src}" destdir="${build.classdir}"
