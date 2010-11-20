@@ -17,6 +17,7 @@
   <property name="build.classdir" value="${build.home}/classes" />
   <property name="build.test.classdir" value="${build.home}/test-classes" />
   <property name="build.test.src" value="${basedir}/test" />
+  <property name="build.text.reports" value="${build.home}/test-reports" />
 
   <path id="classpath">
     <pathelement path="${classpath}" />
@@ -56,7 +57,7 @@
     </javac>
   </target>
 
-  <target name="compile-tests">
+  <target name="compile-tests" depends="compile">
     <echo message="Compile Tests" />
     <mkdir dir="${build.test.classdir}" />
     <javac srcdir="${build.test.src}" destdir="${build.test.classdir}"
@@ -67,13 +68,14 @@
 
   <target name="test" depends="compile-tests">
     <echo message="Run Tests" />
-    <junit>
+    <mkdir dir="${build.text.reports}"/>
+    <junit haltonfailure="true" haltonerror="true" printsummary="true">
       <classpath>
         <path refid="classpath.test" />
         <pathelement path="${build.test.classdir}" />
       </classpath>
-      <formatter type="brief" usefile="false" />
-      <batchtest>
+      <formatter type="xml" />
+      <batchtest todir="${build.text.reports}">
         <fileset dir="${build.test.classdir}" includes="**/*Test.class" />
       </batchtest>
     </junit>
