@@ -1,6 +1,6 @@
 package basar.domain;
 
-import java.util.List;
+import java.util.Collection;
 
 
 interface SellerRepository {
@@ -13,6 +13,6 @@ interface SellerRepository {
 
 	void deleteSeller(Seller seller);
 
-	List<Seller> getSellerList();
+	Collection<Seller> getSellerList();
 
 }

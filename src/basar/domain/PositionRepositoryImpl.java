@@ -1,7 +1,7 @@
 package basar.domain;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
 
 class PositionRepositoryImpl implements PositionRepository {
 
@@ -12,7 +12,7 @@ class PositionRepositoryImpl implements PositionRepository {
 		return new Position();
 	}
 
-	public List<Position> getPositionList() {
+	public Collection<Position> getPositionList() {
 		return new ArrayList<Position>();
 	}
 

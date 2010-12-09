@@ -1,6 +1,6 @@
 package basar.domain;
 
-import java.util.List;
+import java.util.Collection;
 
 interface PositionRepository {
 	
@@ -12,6 +12,6 @@ interface PositionRepository {
 
 	void deletePosition(Position position);
 
-	List<Position> getPositionList();
+	Collection<Position> getPositionList();
 
 }

@@ -1,7 +1,6 @@
 package basar.domain;
 
-import java.util.List;
-
+import java.util.Collection;
 
 public interface BasarFacade {
 	
@@ -19,7 +18,7 @@ public interface BasarFacade {
 
 	void deletePosition(Position position);
 
-	List<Position> getPositionList();
+	Collection<Position> getPositionList();
 	
 	Seller getSeller(long basarNumber);
 
@@ -29,6 +28,6 @@ public interface BasarFacade {
 
 	void deleteSeller(Seller seller);
 
-	List<Seller> getSellerList();
+	Collection<Seller> getSellerList();
 
 }
